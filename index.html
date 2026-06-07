@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Enlix - Soluciones tecnológicas y servicios de TI para empresas. Equipos, soporte, desarrollo, seguridad y consultoría.">
+  <title>Enlix — Soluciones tecnológicas para empresas</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/styles.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- ======================== HEADER ======================== -->
+<!-- a11y: <header> envuelve la navegación principal -->
+<header aria-label="Encabezado del sitio">
+  <nav class="navbar navbar-expand-lg enlix-navbar sticky-top" aria-label="Navegación principal">
+    <div class="container">
+      <a class="navbar-brand" href="/" aria-label="Enlix — Inicio">
+        <!-- a11y: SVG decorativo oculto del AT -->
+        <svg width="36" height="36" viewBox="0 0 36 36" class="brand-logo" aria-hidden="true" focusable="false">
+          <rect width="36" height="36" rx="6" fill="#0A1E3D"/>
+          <text x="18" y="23" font-family="Montserrat,sans-serif" font-weight="800" font-size="14" fill="url(#brandGrad)" text-anchor="middle">EN</text>
+          <defs>
+            <linearGradient id="brandGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#06B6D4"/>
+              <stop offset="100%" stop-color="#F59E0B"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </a>
+
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#enlixNav"
+              aria-controls="enlixNav" aria-expanded="false" aria-label="Abrir menú de navegación">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="enlixNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="/">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="nosotros">Nosotros</a></li>
+          <li class="nav-item dropdown enlix-flyout-menu">
+            <!-- a11y: aria-expanded se gestiona via Bootstrap JS -->
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Servicios</a>
+            <ul class="dropdown-menu flyout-parent" aria-label="Submenú de servicios">
+              <li class="flyout-item">
+                <a href="servicio-distribucion-equipos" class="flyout-link" tabindex="0">
+                  <span class="flyout-link-text"><span class="flyout-num" aria-hidden="true">01</span>Equipos y suministros</span>
+                  <span class="flyout-chev" aria-hidden="true">&rsaquo;</span>
+                </a>
+                <ul class="flyout-sub" aria-label="Equipos y suministros">
+                  <li class="flyout-sub-title" aria-hidden="true">Equipos y suministros</li>
+                  <li><a href="servicio-distribucion-equipos">Distribución de equipos</a></li>
+                  <li><a href="servicio-suministros-impresion">Suministros de impresión</a></li>
+                  <li><a href="servicio-mantenimiento-preventivo">Mantenimiento preventivo</a></li>
+                </ul>
+              </li>
+              <li class="flyout-item">
+                <a href="servicio-arrendamiento-equipos" class="flyout-link" tabindex="0">
+                  <span class="flyout-link-text"><span class="flyout-num" aria-hidden="true">02</span>Soporte e infraestructura</span>
+                  <span class="flyout-chev" aria-hidden="true">&rsaquo;</span>
+                </a>
+                <ul class="flyout-sub" aria-label="Soporte e infraestructura">
+                  <li class="flyout-sub-title" aria-hidden="true">Soporte e infraestructura</li>
+                  <li><a href="servicio-arrendamiento-equipos">Arrendamiento de equipos</a></li>
+                  <li><a href="servicio-outsourcing-ti">Outsourcing de personal TI</a></li>
+                  <li><a href="servicio-cableado-estructurado">Cableado estructurado</a></li>
+                </ul>
+              </li>
+              <li class="flyout-item">
+                <a href="servicio-infraestructura-tecnologica" class="flyout-link" tabindex="0">
+                  <span class="flyout-link-text"><span class="flyout-num" aria-hidden="true">03</span>Desarrollo web y software</span>
+                  <span class="flyout-chev" aria-hidden="true">&rsaquo;</span>
+                </a>
+                <ul class="flyout-sub" aria-label="Desarrollo web y software">
+                  <li class="flyout-sub-title" aria-hidden="true">Desarrollo web y software</li>
+                  <li><a href="servicio-infraestructura-tecnologica">Infraestructura tecnológica</a></li>
+                  <li><a href="servicio-desarrollo-web">Desarrollo de páginas web</a></li>
+                  <li><a href="servicio-desarrollo-software">Desarrollo de software</a></li>
+                </ul>
+              </li>
+              <li class="flyout-item">
+                <a href="servicio-cctv" class="flyout-link" tabindex="0">
+                  <span class="flyout-link-text"><span class="flyout-num" aria-hidden="true">04</span>Seguridad y servicios cloud</span>
+                  <span class="flyout-chev" aria-hidden="true">&rsaquo;</span>
+                </a>
+                <ul class="flyout-sub" aria-label="Seguridad y servicios cloud">
+                  <li class="flyout-sub-title" aria-hidden="true">Seguridad y servicios cloud</li>
+                  <li><a href="servicio-cctv">CCTV (videovigilancia)</a></li>
+                  <li><a href="servicio-microsoft-365">Microsoft 365</a></li>
+                  <li><a href="servicio-hosting">Hosting</a></li>
+                </ul>
+              </li>
+              <li class="flyout-item">
+                <a href="servicio-erp" class="flyout-link" tabindex="0">
+                  <span class="flyout-link-text"><span class="flyout-num" aria-hidden="true">05</span>Consultoría, ERP y CRM</span>
+                  <span class="flyout-chev" aria-hidden="true">&rsaquo;</span>
+                </a>
+                <ul class="flyout-sub" aria-label="Consultoría, ERP y CRM">
+                  <li class="flyout-sub-title" aria-hidden="true">Consultoría, ERP y CRM</li>
+                  <li><a href="servicio-erp">Implementación de ERP</a></li>
+                  <li><a href="servicio-crm">Implementación de CRM</a></li>
+                  <li><a href="servicio-consultoria-tecnologica">Consultoría tecnológica</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="contacto">Contacto</a></li>
+          <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+            <a class="btn btn-primary-enlix" href="contacto">Solicitar cotización</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- ======================== MAIN ======================== -->
+<!-- a11y: <main> identifica el contenido principal -->
+<main>
+  <!-- ======================== HERO ======================== -->
+  <section class="hero" aria-label="Introducción">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9">
+          <div class="hero-line" aria-hidden="true"></div>
+          <h1>
+            <span class="hero-highlight">ENLIX</span>
+          </h1>
+          <p class="lead">
+            ¿Buscas soluciones tecnológicas? Estamos para ayudarte.
+            Asesoría, implementación y soporte en infraestructura tecnológica,
+            equipos y soluciones de TI para empresas que necesitan operar
+            con confianza y eficiencia.
+          </p>
+          <div class="hero-cta">
+            <a href="#servicios" class="btn btn-primary-enlix">Ver nuestros servicios</a>
+            <a href="contacto" class="btn btn-outline-enlix">Contáctanos</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-stats" aria-label="Estadísticas de la empresa">
+        <div class="row gy-4">
+          <div class="col-6 col-md-3">
+            <span class="stat-num" aria-hidden="true">15+</span>
+            <span class="stat-lbl">Servicios especializados</span>
+          </div>
+          <div class="col-6 col-md-3">
+            <span class="stat-num" aria-hidden="true">5</span>
+            <span class="stat-lbl">Áreas de práctica</span>
+          </div>
+          <div class="col-6 col-md-3">
+            <span class="stat-num" aria-hidden="true">B2B</span>
+            <span class="stat-lbl">Enfoque corporativo</span>
+          </div>
+          <div class="col-6 col-md-3">
+            <span class="stat-num" aria-hidden="true">2026</span>
+            <span class="stat-lbl">Operaciones activas</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== LOGOS STRIP ======================== -->
+  <section class="logos-strip" aria-label="Marcas con las que trabajamos">
+    <div class="container">
+      <p class="logos-strip__label">Trabajamos con marcas reconocidas del ecosistema TI</p>
+      <div class="row align-items-center justify-content-around gy-4">
+        <div class="col-6 col-md-2 text-center">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 132 28" class="brand-logo-img" role="img" aria-label="Microsoft">
+            <rect width="12" height="12" fill="#F25022"/>
+            <rect x="14" width="12" height="12" fill="#7FBA00"/>
+            <rect y="14" width="12" height="12" fill="#00A4EF"/>
+            <rect x="14" y="14" width="12" height="12" fill="#FFB900"/>
+            <text x="32" y="21" font-family="'Segoe UI','Inter',Arial,sans-serif" font-size="19" font-weight="600" fill="#64748B" letter-spacing="-0.3">Microsoft</text>
+          </svg>
+        </div>
+        <div class="col-6 col-md-2 text-center">
+          <img src="https://cdn.simpleicons.org/hp/0096D6" alt="HP" class="brand-logo-img" loading="lazy">
+        </div>
+        <div class="col-6 col-md-2 text-center">
+          <img src="https://cdn.simpleicons.org/lenovo/E2231A" alt="Lenovo" class="brand-logo-img" loading="lazy">
+        </div>
+        <div class="col-6 col-md-2 text-center">
+          <img src="https://cdn.simpleicons.org/dell/007DB8" alt="Dell" class="brand-logo-img" loading="lazy">
+        </div>
+        <div class="col-6 col-md-2 text-center">
+          <img src="https://cdn.simpleicons.org/cisco/1BA0D7" alt="Cisco" class="brand-logo-img" loading="lazy">
+        </div>
+        <div class="col-6 col-md-2 text-center">
+          <img src="https://cdn.simpleicons.org/epson/003399" alt="Epson" class="brand-logo-img" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== QUIENES SOMOS ======================== -->
+  <section class="section-pad" aria-labelledby="about-heading">
+    <div class="container">
+      <div class="row gy-5 align-items-center">
+        <div class="col-lg-5">
+          <p class="eyebrow">Quiénes somos</p>
+          <h2 id="about-heading">Tecnología que sostiene tu operación día a día.</h2>
+          <p class="text-muted-enlix">
+            En Enlix nos enfocamos en comprender las necesidades de cada cliente para ofrecer
+            asesoría, implementación y soporte en infraestructura tecnológica, equipos y soluciones
+            de TI. Acompañamos a las empresas para que su tecnología funcione de forma confiable y eficiente.
+          </p>
+          <a href="nosotros" class="btn btn-ghost-enlix mt-2">
+            Conoce más sobre Enlix <span class="arrow">&rarr;</span>
+          </a>
+        </div>
+        <div class="col-lg-7">
+          <div class="about-img-wrap">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1400&q=80"
+                 alt="Equipo de Enlix colaborando en una reunión de trabajo" class="img-fluid" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== SERVICIOS ======================== -->
+  <section id="servicios" class="section-pad" aria-labelledby="services-heading">
+    <div class="container">
+      <div class="row mb-5 align-items-end">
+        <div class="col-lg-7">
+          <p class="eyebrow">Nuestros servicios</p>
+          <h2 id="services-heading">Quince servicios independientes para tu operación tecnológica.</h2>
+        </div>
+        <div class="col-lg-5 text-lg-end mt-3 mt-lg-0">
+          <p class="text-muted-enlix mb-0">
+            Cada servicio se contrata por separado o como parte de una solución integral.
+          </p>
+        </div>
+      </div>
+
+      <!-- Grupo 01 -->
+      <div class="home-svc-group">
+        <div class="home-svc-group-head">
+          <span class="home-svc-group-num" aria-hidden="true">01</span>
+          <h3>Equipos y suministros</h3>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <a href="servicio-distribucion-equipos" class="home-svc-card">
+              <span class="home-svc-card-tag">Equipos y suministros</span>
+              <h4>Distribución de equipos</h4>
+              <p>Suministramos computadoras, laptops, impresoras, tablets, servidores y accesorios tecnológicos de marcas reconocidas para empresas.</p>
+              <span class="home-svc-card-cta">Ver servicio <span class="arrow" aria-hidden="true">&rarr;</span></span>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a href="servicio-suministros-impresion" class="home-svc-card">
+              <span class="home-svc-card-tag">Equipos y suministros</span>
+              <h4>Suministros de impresión</h4>
+              <p>Proveemos cartuchos, tóners y suministros de impresión originales y compatibles para garantizar el correcto funcionamiento de tus equipos.</p>
+              <span class="home-svc-card-cta">Ver servicio <span class="arrow" aria-hidden="true">&rarr;</span></span>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a href="servicio-mantenimiento-preventivo" class="home-svc-card">
+              <span class="home-svc-card-tag">Equipos y suministros</span>
+              <h4>Mantenimiento preventivo</h4>
+              <p>Realizamos revisiones periódicas, limpieza y optimización de computadoras y equipos tecnológicos para prevenir fallas y prolongar su vida útil.</p>
+              <span class="home-svc-card-cta">Ver servicio <span class="arrow" aria-hidden="true">&rarr;</span></span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Grupo 02 -->
+      <div class="home-svc-group">
+        <div class="home-svc-group-head">
+          <span class="home-svc-group-num" aria-hidden="true">02</span>
+          <h3>Soporte e infraestructura</h3>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <a href="servicio-arrendamiento-equipos" class="home-svc-card">
+              <span class="home-svc-card-tag">Soporte e infraestructura</span>
+              <h4>Arrendamiento de equipos</h4>
+              <p>Ofrecemos el alquiler de computadoras, laptops, impresoras y otros equipos tecnológicos para que las empresas accedan a tecnología sin inversión inicial.</p>
+              <span class="home-svc-card-cta">Ver servicio <span class="arrow" aria-hidden="true">&rarr;</span></span>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a href="servicio-outsourcing-ti" class="home-svc-card">
+              <span class="home-svc-card-tag">Soporte e infraestructura</span>
+              <h4>Outsourcing de personal TI</h4>
+              <p>Proveemos profesionales especializados en tecnología de la información para apoyar o gestionar el área de TI de tu empresa.</p>
+              <span class="home-svc-card-cta">Ver servicio <span class="arrow" aria-hidden="true">&rarr;</span></span>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a href="servicio-cableado-estructurado" class="home-svc-card">
+              <span class="home-svc-card-tag">Soporte e infraestructura</span>
+              <h4>Cableado estructurado</h4>
+              <p>Diseñamos e implementamos sistemas de cableado estructurado que permiten una conectividad estable y organizada para tu empresa.</p>
+              <span class="home-svc-card-cta">Ver servicio <span class="arrow" aria-hidden="true">&rarr;</span></span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Grupo 03 -->
+      <div class="home-svc-group">
+        <div class="home-svc-group-head">
+          <span class="home-svc-group-num" aria-hidden="true">03</span>
+          <h3>Desarrollo web y software</h3>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <a href="servicio-infraestructura-tecnologica" class="home-svc-card">
+              <span class="home-svc-card-tag">Desarrollo web y software</span>
+              <h4>Infraestructura tecnológica</h4>
+              <p>Diseñamos e implementamos la infraestructura tecnológica necesaria para que las empresas operen de manera segura, eficiente y escalable.</p>
+              <span class="home-svc-card-cta">Ver servicio <span class="arrow" aria-hidden="true">&rarr;</span></span>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a href="servicio-desarrollo-web" class="home-svc-card">
+              <span class="home-svc-card-tag">Desarrollo web y software</span>
+              <h4>Desarrollo de páginas web</h4>
+              <p>Diseñamos y desarrollamos sitios web modernos, funcionales y adaptados a las necesidades de cada empresa. Creamos tu presencia digital.</p>
+              <span class="home-svc-card-cta">Ver servicio <span class="arrow" aria-hidden="true">&rarr;</span></span>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a href="servicio-desarrollo-software" class="home-svc-card">
+              <span class="home-svc-card-tag">Desarrollo web y software</span>
+              <h4>Desarrollo de software</h4>
+              <p>Diseñamos y desarrollamos soluciones de software a medida que optimizan procesos y mejoran la eficiencia de tu organización.</p>
+              <span class="home-svc-card-cta">Ver servicio <span class="arrow" aria-hidden="true">&rarr;</span></span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Grupo 04 -->
+      <div class="home-svc-group">
+        <div class="home-svc-group-head">
+          <span class="home-svc-group-num" aria-hidden="true">04</span>
+          <h3>Seguridad y servicios cloud</h3>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <a href="servicio-cctv" class="home-svc-card">
+              <span class="home-svc-card-tag">Seguridad y servicios cloud</span>
+              <h4>CCTV (videovigilancia)</h4>
+              <p>Implementamos soluciones de videovigilancia con cámaras de seguridad que permiten monitorear y proteger las instalaciones de tu empresa.</p>
+              <span class="home-svc-card-cta">Ver servicio <span class="arrow" aria-hidden="true">&rarr;</span></span>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a href="servicio-microsoft-365" class="home-svc-card">
+              <span class="home-svc-card-tag">Seguridad y servicios cloud</span>
+              <h4>Microsoft 365</h4>
+              <p>Proveemos licencias de Microsoft 365 para empresas, incluyendo correo empresarial, almacenamiento en la nube y herramientas de productividad.</p>
+              <span class="home-svc-card-cta">Ver servicio <span class="arrow" aria-hidden="true">&rarr;</span></span>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a href="servicio-hosting" class="home-svc-card">
+              <span class="home-svc-card-tag">Seguridad y servicios cloud</span>
+              <h4>Hosting</h4>
+              <p>Ofrecemos servicios de alojamiento web seguros y confiables para mantener páginas y aplicaciones disponibles en línea las 24 horas.</p>
+              <span class="home-svc-card-cta">Ver servicio <span class="arrow" aria-hidden="true">&rarr;</span></span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Grupo 05 -->
+      <div class="home-svc-group">
+        <div class="home-svc-group-head">
+          <span class="home-svc-group-num" aria-hidden="true">05</span>
+          <h3>Consultoría, ERP y CRM</h3>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <a href="servicio-erp" class="home-svc-card">
+              <span class="home-svc-card-tag">Consultoría, ERP y CRM</span>
+              <h4>Implementación de ERP</h4>
+              <p>Implementamos soluciones ERP que integran y automatizan procesos clave como ventas, compras, inventarios y finanzas de tu empresa.</p>
+              <span class="home-svc-card-cta">Ver servicio <span class="arrow" aria-hidden="true">&rarr;</span></span>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a href="servicio-crm" class="home-svc-card">
+              <span class="home-svc-card-tag">Consultoría, ERP y CRM</span>
+              <h4>Implementación de CRM</h4>
+              <p>Implementamos soluciones CRM que permiten organizar, gestionar y dar seguimiento a clientes y oportunidades de venta.</p>
+              <span class="home-svc-card-cta">Ver servicio <span class="arrow" aria-hidden="true">&rarr;</span></span>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a href="servicio-consultoria-tecnologica" class="home-svc-card">
+              <span class="home-svc-card-tag">Consultoría, ERP y CRM</span>
+              <h4>Consultoría tecnológica</h4>
+              <p>Brindamos asesoría especializada para evaluar, planificar y mejorar la infraestructura y procesos tecnológicos de tu organización.</p>
+              <span class="home-svc-card-cta">Ver servicio <span class="arrow" aria-hidden="true">&rarr;</span></span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Custom CTA -->
+      <div class="row mt-4">
+        <div class="col-12">
+          <div class="svc-custom-cta">
+            <div>
+              <p class="svc-custom-cta__num">A tu medida</p>
+              <h3>¿Necesitas algo distinto?</h3>
+              <p>Cuéntanos sobre tu proyecto y diseñamos una solución específica para tu organización.</p>
+            </div>
+            <a href="contacto" class="btn btn-primary-enlix">Conversemos</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== POR QUE ENLIX ======================== -->
+  <section class="section-pad" aria-labelledby="why-heading">
+    <div class="container">
+      <div class="row gy-5">
+        <div class="col-lg-4">
+          <p class="eyebrow">Por qué Enlix</p>
+          <h2 id="why-heading">Una relación de largo plazo, no una transacción.</h2>
+        </div>
+        <div class="col-lg-8">
+          <div class="row g-4">
+            <div class="col-md-6">
+              <div class="reason-card">
+                <h3>Asesoría especializada</h3>
+                <p class="text-muted-enlix">Comprendemos tu operación antes de proponer una solución. Recomendamos lo que tu empresa realmente necesita.</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="reason-card">
+                <h3>Continuidad operativa</h3>
+                <p class="text-muted-enlix">Soporte continuo, suministros disponibles y mantenimiento preventivo para que tu tecnología no detenga el negocio.</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="reason-card">
+                <h3>Calidad y garantía</h3>
+                <p class="text-muted-enlix">Trabajamos con equipos y suministros de marcas reconocidas, con garantía y respaldo formal.</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="reason-card">
+                <h3>Acompañamiento integral</h3>
+                <p class="text-muted-enlix">Desde la asesoría inicial hasta el soporte posterior, acompañamos cada etapa del proyecto.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== CTA STRIP ======================== -->
+  <section class="cta-strip" aria-label="Llamado a la acción final">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-8">
+          <h2>¿Hablamos sobre tu próximo proyecto tecnológico?</h2>
+          <p>Cuéntanos qué necesita tu empresa. Te respondemos con una propuesta clara.</p>
+        </div>
+        <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+          <a href="contacto" class="btn btn-primary-enlix">Solicitar cotización</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ======================== FOOTER ======================== -->
+<!-- a11y: <footer> identifica el pie de página, aria-label redundante pero refuerza -->
+<footer class="enlix-footer" aria-label="Pie de página">
+  <div class="container">
+    <div class="row gy-5">
+
+      <div class="col-12 col-lg-3">
+        <!-- a11y: SVG decorativo — AT lo salta -->
+        <svg width="48" height="48" viewBox="0 0 48 48" class="footer-brand-img" aria-hidden="true" focusable="false">
+          <rect width="48" height="48" rx="8" fill="#0A1E3D"/>
+          <text x="24" y="31" font-family="Montserrat,sans-serif" font-weight="800" font-size="19" fill="url(#footGrad)" text-anchor="middle">EN</text>
+          <defs>
+            <linearGradient id="footGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#06B6D4"/>
+              <stop offset="100%" stop-color="#F59E0B"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <p class="footer-tag">
+          Soluciones tecnológicas y servicios de TI que ayudan a las empresas a operar
+          con confianza, eficiencia y continuidad.
+        </p>
+        <p class="footer-info"><span>Dónde estamos</span>Lima, Perú</p>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-2">
+        <h5>Compañía</h5>
+        <ul>
+          <li><a href="/">Inicio</a></li>
+          <li><a href="nosotros">Nosotros</a></li>
+          <li><a href="contacto">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-2">
+        <h5>Servicios</h5>
+        <ul class="footer-services">
+          <li class="footer-services-group">
+            <span class="footer-services-group-label">Equipos y suministros</span>
+            <a href="servicio-distribucion-equipos">Distribución de equipos</a>
+            <a href="servicio-suministros-impresion">Suministros de impresión</a>
+            <a href="servicio-mantenimiento-preventivo">Mantenimiento preventivo</a>
+          </li>
+          <li class="footer-services-group">
+            <span class="footer-services-group-label">Soporte e infraestructura</span>
+            <a href="servicio-arrendamiento-equipos">Arrendamiento de equipos</a>
+            <a href="servicio-outsourcing-ti">Outsourcing de personal TI</a>
+            <a href="servicio-cableado-estructurado">Cableado estructurado</a>
+          </li>
+          <li class="footer-services-group">
+            <span class="footer-services-group-label">Desarrollo web y software</span>
+            <a href="servicio-infraestructura-tecnologica">Infraestructura tecnológica</a>
+            <a href="servicio-desarrollo-web">Desarrollo de páginas web</a>
+            <a href="servicio-desarrollo-software">Desarrollo de software</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-2">
+        <ul class="footer-services">
+          <li class="footer-services-group">
+            <span class="footer-services-group-label">Seguridad y servicios cloud</span>
+            <a href="servicio-cctv">CCTV (videovigilancia)</a>
+            <a href="servicio-microsoft-365">Microsoft 365</a>
+            <a href="servicio-hosting">Hosting</a>
+          </li>
+          <li class="footer-services-group">
+            <span class="footer-services-group-label">Consultoría, ERP y CRM</span>
+            <a href="servicio-erp">Implementación de ERP</a>
+            <a href="servicio-crm">Implementación de CRM</a>
+            <a href="servicio-consultoria-tecnologica">Consultoría tecnológica</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-3">
+        <h5>Contacto</h5>
+        <p class="footer-info"><span>Celular</span>963 885 176</p>
+        <p class="footer-info"><span>Correo</span><a href="mailto:servicios@enlix.pe">servicios@enlix.pe</a></p>
+        <p class="footer-info"><span>LinkedIn</span><a href="https://www.linkedin.com/company/Enlix/" target="_blank" rel="noopener">/company/Enlix</a></p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          &copy; 2026 Enlix. Todos los derechos reservados. Maquetación clonada con fines de prueba técnica por Benjamin Gonzáles.
+        </div>
+        <div class="col-md-6 text-md-end mt-2 mt-md-0">
+          Soluciones tecnológicas para empresas en el Perú.
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ======================== WHATSAPP FLOAT ======================== -->
+<a class="wa-float"
+   href="https://wa.me/51963885176?text=Hola%20Enlix%2C%20me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios."
+   target="_blank" rel="noopener"
+   aria-label="Escríbenos por WhatsApp">
+  <span class="wa-pulse" aria-hidden="true"></span>
+  <span class="wa-label">Escríbenos por WhatsApp</span>
+  <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true" focusable="false">
+    <path d="M16.004 4C9.385 4 4 9.385 4 16.004c0 2.114.555 4.18 1.61 6L4 28l6.155-1.59a12 12 0 0 0 5.85 1.498h.005C22.62 27.908 28 22.523 28 15.904 28 9.285 22.623 4 16.004 4zm6.948 17.018c-.295.83-1.715 1.59-2.4 1.688-.612.09-1.387.13-2.243-.14-.515-.165-1.176-.385-2.025-.752-3.566-1.54-5.894-5.131-6.07-5.366-.177-.236-1.46-1.94-1.46-3.706 0-1.766.927-2.633 1.255-2.996.325-.36.706-.45.94-.45h.677c.216 0 .505-.082.792.604.295.706 1.005 2.473 1.094 2.653.09.18.15.39.03.625-.118.236-.176.382-.353.59-.176.205-.372.46-.531.617-.176.176-.36.367-.156.722.205.354.91 1.504 1.957 2.434 1.346 1.2 2.48 1.572 2.832 1.748.354.176.56.146.766-.088.205-.236.882-1.03 1.117-1.385.236-.354.471-.295.796-.176.325.117 2.063.975 2.418 1.152.354.176.59.265.677.412.088.146.088.85-.207 1.682z"/>
+  </svg>
+</a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/enlix.js"></script>
+</body>
+</html>
